@@ -1,41 +1,31 @@
-import React, {useState} from 'react';
-import {Button, Form} from 'react-bootstrap';
+import React, {useState} from "react";
 
 const Signin = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [login, setlogin] = useState({"email": "", "password": ""});
     const [error, setError] = useState("");
-    return (
-        <div className='login-container'>
-            <div className='login-inner'>
-                <div className='login-img'>
-                    <img src="https://www.mashed.com/img/gallery/the-absolute-best-italian-food-in-the-u-s/intro-1643754112.jpg"/>
-                </div>
-                <div className='login-form'>
-                    <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" />
-                            <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                            </Form.Text>
-                        </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="Check me out" />
-                        </Form.Group>
-                        <Button variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </Form>
+    const handleChange = () => {
+
+    };
+    
+    return (
+        <form className="login-form">
+            <div className="login-input-container">
+                <div className='input-wrapper'>
+                    <label for="login-email">Email address</label>
+                    <input name="username" type="text" value={login.email} id="login-email" onChange={handleChange}/>
+                </div>
+                <div className='input-wrapper'>
+                    <label for="login-password">Password</label>
+                    <input name="username" type="password" value={login.password} id="login-password" onChange={handleChange}/>
                 </div>
             </div>
-        </div>
+            <div className="login-btn-container">
+                <button type="submit">LOGIN</button>
+            </div>
+        </form>
     )
 };
+
 
 export default Signin;

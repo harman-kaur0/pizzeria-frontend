@@ -9,7 +9,7 @@ const Navigation = () => {
             <div class="link-container">
                 <a href='/menu'>Menu</a>
                 <a href='/'>Home</a>
-                <a href='/signin'>Sign in</a>
+                <a href='/account'>Sign in</a>
                 <a href="/cart">Cart</a>
             </div>
         </Navbar>
