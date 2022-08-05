@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Button, Form} from 'react-bootstrap';
 import Signin from '../components/Signin';
 import Signup from '../components/Signup';
+import logo from '../icons8-pizza-64.png';
 
 const Account = () => {
 
@@ -13,9 +14,9 @@ const Account = () => {
 
     return (
         <div className='account-container'>
-            <div className='account-inner'>
+            {/* <div className='account-inner'>
                 <div className='account-img'>
-                    <img src="https://img.freepik.com/free-photo/large-mixed-pizza-with-meat_140725-1274.jpg?w=2000"/>
+                <img src={logo}/>
                 </div>
                 <div className='account-right'>
                     <div className='account-btn-container'>
@@ -26,6 +27,9 @@ const Account = () => {
                         {click === 'Sign Up' ? <Signup/> : <Signin/>}
                     </div>
                 </div>
+            </div> */}
+            <div className='account-inner'>
+
             </div>
         </div>
     )

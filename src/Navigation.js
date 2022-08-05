@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Navigation = () => {
     return (
-        <Navbar expand="lg" className="navbar-container justify-content-end">
+        <nav className="navbar-container">
             <img src={logo}/>
             <div class="link-container">
                 <a href='/menu'>Menu</a>
@@ -12,7 +12,7 @@ const Navigation = () => {
                 <a href='/account'>Sign in</a>
                 <a href="/cart">Cart</a>
             </div>
-        </Navbar>
+        </nav>
     );
 };
 
