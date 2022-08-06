@@ -1,6 +1,7 @@
 import React, {useState} from "react";
+import { Button } from "react-bootstrap";
 
-const Signup = () => {
+const Signup = ({handleClick}) => {
     const[signup, setSignup] = useState({"name": "", "email": "", "password": "", "confirmPassword": ""});
 
     const handleChange = () => {
@@ -9,6 +10,7 @@ const Signup = () => {
 
     return (
         <form className="signup-form">
+            <h1>Sign Up</h1>
             <div className="signup-input-container">
                 <div className='input-wrapper'>
                     <label for="signup-name">Name</label>
@@ -27,8 +29,9 @@ const Signup = () => {
                     <input name="password" type="password" value={signup.confirmPassword} id="signup-confirm-password" onChange={handleChange}/>
                 </div>
             </div>
-            <div className="signup-btn-container">
-                <button type="submit">SIGN UP</button>
+            <div className="signup-bottom-container">
+                <Button type="submit" variant='dark'>Sign Up</Button>
+                <p>Already a member? <b role="button" onClick={handleClick}>Login</b>.</p>
             </div>
         </form>
     )

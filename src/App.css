@@ -78,9 +78,15 @@ html, body {
 .home-text a {
   margin-left: auto;
   margin-top: 10px;
+}
+
+.home-text a, .login-form button, .signup-form button {
   border: 2px solid yellow;
   font-weight: bold;
   border-radius: 15px;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: yellow;
 }
 
 .home-pizza-img {
@@ -137,26 +143,28 @@ html, body {
   box-shadow: -8px 3px 25px 1px;
 }
 
-.account-img {
-  width: 50%;
-  /* border: 2px solid orange; */
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
-.account-img img {
-  width: 100%;
-  height: 100%;
-}
-
-.account-right {
-  width: 50%;
-  /* border: 2px solid purple; */
+.account-left {
+  width: 73.5%;
+  border: 2px solid purple;
   justify-content: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.account-right {
+  width: 26.5%;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-right p {
+  font-weight: bold;
+  margin: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .account-btn-container {
@@ -182,86 +190,61 @@ html, body {
 }
 
 .account-form-container {
-  height: 80%;
-  width: 70%;
-  /* border: 2px solid violet; */
+  height: 100%;
+  width: 100%;
 }
 
 /* Login Form */
-
-.login-form {
-  /* border: 2px solid orange; */
-  width: 100%;
-  height: 100%;
-}
-
-.login-input-container {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-}
-
-.login-form .input-wrapper {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
-}
-
-.login-btn-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30%;
-}
-
-.login-btn-container button {
-  border-radius: 15px;
-  padding-left: 25px;
-  padding-right: 25px;
-  background-color: red;
-  color: black;
-  border: none;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
 /* Sign up */
-.signup-form {
-  /* border: 2px solid orange; */
+
+.login-form, .signup-form {
+  border: 2px solid blue;
   width: 100%;
   height: 100%;
-}
-
-.signup-input-container {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  height: 70%;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.signup-form .input-wrapper {
-  padding: 10px;
+.account-form-container h1 {
+  color: yellow;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.login-input-container, .signup-input-container {
+  width: 70%;
+}
+
+.account-form-container .input-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  
+  width: 100%;
 }
 
-.signup-btn-container {
+.account-form-container label {
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.account-form-container input {
+  margin-bottom: 10px;
+}
+
+.login-bottom-container, .signup-bottom-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30%;
+  flex-direction: column;
+  width: 70%;
 }
 
-.signup-btn-container button {
-  border-radius: 15px;
-  padding-left: 25px;
-  padding-right: 25px;
-  background-color: red;
-  color: black;
-  border: none;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.account-form-container button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.account-form-container p {
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
