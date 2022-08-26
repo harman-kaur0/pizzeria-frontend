@@ -121,31 +121,29 @@ html, body {
 /* account page */
 
 .account-container {
-  /* border: 2px solid purple; */
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
   background: linear-gradient(to right, rgb(49,52,55) 70%, white 30%);
 }
 
 .account-inner {
   display: flex;
   justify-content: center;
-  /* border: 2px solid orange; */
   height: 75%;
   width: 85%;
   border-radius: 25px;
   overflow: hidden;
   max-height: 950px;
-  min-height: 250px;
+  min-height: 400px;
   box-shadow: -8px 3px 25px 1px;
 }
 
 .account-left {
   width: 73.5%;
-  border: 2px solid purple;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -154,7 +152,6 @@ html, body {
 
 .account-right {
   width: 26.5%;
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,28 +164,6 @@ html, body {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.account-btn-container {
-  /* border: 2px solid purple; */
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.account-btn-container button.active {
-  background-color: black;
-  border-radius: 15px;
-  color: white;
-}
-
-.account-btn-container button {
-  border: none;
-  padding-right: 25px;
-  padding-left: 25px;
-  color: black;
-  background-color: rgb(248, 237, 218);
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
 .account-form-container {
   height: 100%;
   width: 100%;
@@ -198,7 +173,6 @@ html, body {
 /* Sign up */
 
 .login-form, .signup-form {
-  border: 2px solid blue;
   width: 100%;
   height: 100%;
   display: flex;
