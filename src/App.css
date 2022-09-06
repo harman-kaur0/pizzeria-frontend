@@ -224,14 +224,38 @@ html, body {
 }
 
  /* menu items */
- .item-container {
+ .menu-container {
+  border: 1px solid yellow;
+  width: 100vw;
+  margin-top: 80px;
   display: flex;
-  flex-direction: column;
+ }
+
+ .menu-sidebar {
+  justify-content: flex-start;
+  width: 30%;
+  border: 1px solid white;
+ }
+
+ .menu-sidebar button {
+  width: 30%;
+  height: 20px;
+ }
+
+ .item-container {
+  border: 1px solid paleturquoise;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap; 
+  width: 70%;
  }
 
  .item {
-  width: 200px;
+  border: 1px solid red;
+  background-color: white;
+  width: 27%;
   height: 200px;
+  margin: 15px;
  }
 
  .item img {

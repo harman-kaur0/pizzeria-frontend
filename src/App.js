@@ -7,8 +7,9 @@ import Account from './containers/Account';
 import Cart from './components/Cart';
 import React, {useState, useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { fetchItems } from './actions/item';
+import { fetchItems } from './actions/items';
 import { useDispatch } from 'react-redux';
+import { fetchCategories } from './actions/categories';
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(fetchItems());
+    dispatch(fetchCategories());
   }, []);
 
 
