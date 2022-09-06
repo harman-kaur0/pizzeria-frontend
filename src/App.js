@@ -7,8 +7,16 @@ import Account from './containers/Account';
 import Cart from './components/Cart';
 import React, {useState, useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { fetchItems } from './actions/item';
+import { useDispatch } from 'react-redux';
 
 const App = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchItems());
+  }, []);
 
 
   return (

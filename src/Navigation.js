@@ -21,7 +21,7 @@ const Navigation = () => {
     return (
         <nav className="navbar-container">
             <img src={logo}/>
-            <div class="link-container">
+            <div className="link-container">
                 <a href='/menu'>Menu</a>
                 <a href='/'>Home</a>
                 <a href='/account'>Sign in</a>

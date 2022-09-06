@@ -5,7 +5,8 @@ import App from './App';
 import {Provider} from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import rootReducer from "./reducers"
+import rootReducer from "./reducers";
+import { createRoot } from "react-dom/client"
 
 const composeEnhancers =
   typeof window === 'object' &&
@@ -17,11 +18,11 @@ const enhancer = composeEnhancers(applyMiddleware(thunk));
 
 const store = createStore(rootReducer, enhancer);
 
+const root = createRoot(document.getElementById('root'));
 
-ReactDOM.render(
+root.render(
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );
 
