@@ -22,10 +22,10 @@ const Navigation = () => {
         <nav className="navbar-container">
             <img src={logo}/>
             <div className="link-container">
-                <a href='/menu'>Menu</a>
-                <a href='/'>Home</a>
-                <a href='/account'>Sign in</a>
-                <a href="/cart">Cart</a>
+                <a href='/menu'>MENU</a>
+                <a href='/'>HOME</a>
+                <a href='/account'>SIGN IN</a>
+                <a href="/cart">CART</a>
             </div>
         </nav>
     );

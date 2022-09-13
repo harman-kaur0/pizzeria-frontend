@@ -24,6 +24,7 @@
   color: wheat;
   cursor: pointer;
   text-decoration: none;
+  text-decoration: double;
 }
 
 html, body {
@@ -223,31 +224,50 @@ html, body {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.category-navigation {
+  display: flex;
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  justify-content: center;
+}
+
+.category-navigation ul {
+  display: flex;
+}
+
+.category-navigation ul li {
+  list-style: none;
+  padding-left: 30px;
+  text-transform: uppercase;
+}
+
+.category-navigation a {
+  cursor: pointer;
+}
  /* menu items */
- .menu-container {
+ .menu-wrapper {
+  margin-top: 80px;
+ }
+
+ .menu-wrapper {
   border: 1px solid yellow;
   width: 100vw;
-  margin-top: 80px;
   display: flex;
+  flex-direction: column;
+ }
+ 
+ .menu-wrapper h1 {
+  color: yellow;
+  margin-left: 20px;
  }
 
- .menu-sidebar {
-  justify-content: flex-start;
-  width: 30%;
-  border: 1px solid white;
- }
-
- .menu-sidebar button {
-  width: 30%;
-  height: 20px;
- }
-
- .item-container {
-  border: 1px solid paleturquoise;
+ .category-container {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap; 
   width: 70%;
+  margin-top: 80px;
  }
 
  .item {
@@ -261,4 +281,77 @@ html, body {
  .item img {
   width: 50px;
   height: 50px;
+ }
+
+ .menu-container {
+  /* border: 1px solid violet; */
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+ }
+
+ .menu-left {
+  width: 70vw;
+ }
+
+ .menu-right {
+  width: 30vw;
+ }
+
+ .deals-container {
+  border: 1px solid salmon;
+  width: 100%;
+ }
+
+ .category-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+ }
+
+.category {
+  width: 30%;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category a {
+  cursor: pointer;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.category img {
+  height: 95px;
+  width: 143px;
+}
+
+.category h2 {
+  text-transform: capitalize;
+}
+
+ .order-summary {
+  border: 1px solid white;
+  background-color: black;
+ }
+
+ .order-summary h2 {
+  color: black;
+  background-color: yellow;
+ }
+
+ .order-summary p {
+  color: yellow;
+  margin-left: 5px;
  }
