@@ -8,3 +8,10 @@ export const fetchItems = () => {
         .then(items => dispatch({type: "ITEMS", items}))
     }
 };
+
+export const filterItems = (items, category) => {
+    return dispatch => {
+        const filteredItems = category === "VIEW ALL" ? items : items.filter(item => item.category.name === category);
+        dispatch({type: "FILTERED_ITEMS", filteredItems})
+    }
+};
