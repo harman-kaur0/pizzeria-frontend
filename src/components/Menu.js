@@ -15,8 +15,8 @@ const Menu = () => {
             <div className='category-navigation'>
                 <ul> 
                     
-                    {[{name: "VIEW ALL"}, ...categories].map(category =>
-                    <li>
+                    {[{name: "VIEW ALL"}, ...categories].map((category, i) =>
+                    <li key={i}>
                         <a><b>{category.name}</b></a>
                     </li>
                     )}

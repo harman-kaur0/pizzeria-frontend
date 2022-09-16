@@ -1,6 +1,6 @@
 import './App.css';
 import Navigation from './Navigation';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Menu from './components/Menu';
 import Account from './containers/Account';
@@ -25,10 +25,12 @@ const App = () => {
     <div className="App">
       <Navigation/>
       <Router>
-        <Route exact path= '/' render={() => <Home/>}/>
-        <Route exact path="/menu" render={() => <Menu/>}/>
-        <Route exact path="/account" render={() => <Account/>}/>
-        <Route exact path="/cart" render={() => <Cart/>}/>
+        <Routes>
+          <Route exact path= '/' element={<Home/>}/>
+          <Route exact path="/menu" element={<Menu/>}/>
+          <Route exact path="/account" element={<Account/>}/>
+          <Route exact path="/cart" element={<Cart/>}/>
+        </Routes>
       </Router>
     </div>
   );
