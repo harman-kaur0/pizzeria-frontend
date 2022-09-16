@@ -4,6 +4,7 @@
 
 const initialState = {
     items: [],
+    filteredCategory: "",
     filteredItems: []
 };
 
@@ -12,7 +13,7 @@ const itemsReducer = (state=initialState, action) =>{
         case "ITEMS": 
             return {...state, items: action.items}
         case "FILTERED_ITEMS":
-            return {...state, filteredItems: action.filteredItems}
+            return {...state, filteredItems: action.filteredItems, filteredCategory: action.category}
         default:
             return state;
     }

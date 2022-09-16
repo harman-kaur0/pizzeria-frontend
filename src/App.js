@@ -1,10 +1,10 @@
 import './App.css';
 import Navigation from './Navigation';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Home from './components/Home';
-import Menu from './components/Menu';
+import Home from './containers/Home';
+import Menu from './containers/Menu';
 import Account from './containers/Account';
-import Cart from './components/Cart';
+import Cart from './containers/Cart';
 import React, {useState, useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { fetchItems } from './actions/items';

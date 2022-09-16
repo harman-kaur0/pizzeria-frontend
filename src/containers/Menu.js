@@ -1,14 +1,15 @@
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import Item from './Item';
-import Category from './Category';
-import Deal from './Deal';
-import OrderSummary from './OrderSummary';
+import Item from '../components/Item';
+import Category from '../components/Category';
+import Deal from '../components/Deal';
+import OrderSummary from '../components/OrderSummary';
 import { filterItems } from '../actions/items';
 
 const Menu = () => {
 
-    const items = useSelector(state => state.items.items);
+    const itemsSelector = useSelector(state => state.items);
+    const { items, filteredItems, filteredCategory } = itemsSelector
     const categories = useSelector(state => state.categories.categories);
     const dispatch = useDispatch();
 
@@ -29,14 +30,18 @@ const Menu = () => {
                 </ul>
             </div>
             <div className='menu-wrapper'>
-                <h1>MENU</h1>
+                <h1>{ filteredCategory?.toUpperCase() || "MENU" }</h1>
                 <div className='menu-container'>
                     <div className='menu-left'>
                         <div className='deals-container'>
                             <Deal/>
                         </div>
                         <div className='category-container'>
-                            {categories.map(category => <Category category={category} handleClick={handleClick}/>)}
+                            {
+                                filteredItems?.length ?
+                                filteredItems.map((item, i) => <Category key={i} category={item}/>) : 
+                                categories.map((category, i) => <Category key={i} category={category} handleClick={handleClick}/>)
+                            }
                         </div>
                     </div>
                     <div className='menu-right'>
