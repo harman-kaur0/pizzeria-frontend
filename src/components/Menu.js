@@ -1,14 +1,20 @@
 import React from 'react';
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Item from './Item';
 import Category from './Category';
 import Deal from './Deal';
 import OrderSummary from './OrderSummary';
+import { filterItems } from '../actions/items';
 
 const Menu = () => {
 
     const items = useSelector(state => state.items.items);
     const categories = useSelector(state => state.categories.categories);
+    const dispatch = useDispatch();
+
+    const handleClick = (category) => {
+        dispatch(filterItems(items, category));
+    };
 
     return (
         <div className='menu-wrapper'>
@@ -17,7 +23,7 @@ const Menu = () => {
                     
                     {[{name: "VIEW ALL"}, ...categories].map((category, i) =>
                     <li key={i}>
-                        <a><b>{category.name}</b></a>
+                        <a onClick={() => handleClick(category.name)}><b>{category.name}</b></a>
                     </li>
                     )}
                 </ul>
@@ -30,7 +36,7 @@ const Menu = () => {
                             <Deal/>
                         </div>
                         <div className='category-container'>
-                            {categories.map(category => <Category category={category}/>)}
+                            {categories.map(category => <Category category={category} handleClick={handleClick}/>)}
                         </div>
                     </div>
                     <div className='menu-right'>

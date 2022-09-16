@@ -1,10 +1,10 @@
 
 
-const Category = ({category}) => {
+const Category = ({category, handleClick}) => {
     return (
         <div className="category">
-            <a>
-                <img src={category.image}/>
+            <a onClick={() => handleClick(category.name)}>
+                <img src={category.image} alt={category.name}/>
                 <h2>{category.name}</h2>
             </a>
         </div>
